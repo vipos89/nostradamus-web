@@ -22,7 +22,7 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
 RUN  chown -R www-data:www-data /var/www/html \
-    && sudo chmod 775 -R /var/www/html \
+    &&  chmod 775 -R /var/www/html \
 
 WORKDIR /var/www/html
 # Куда же без composer'а.
