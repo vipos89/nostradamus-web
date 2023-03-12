@@ -21,7 +21,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
-RUN sudo chown -R www-data:www-data /var/www/html \
+RUN  chown -R www-data:www-data /var/www/html \
     && sudo chmod 775 -R /var/www/html \
 
 WORKDIR /var/www/html
